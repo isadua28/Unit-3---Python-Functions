@@ -2,6 +2,11 @@
 Python Functions - Unit 3 Lesson 1 Starter Code
 """
 
+def calculate_score(points, bonus):
+    total = points + bonus
+    print("Score calculated")
+    return total 
+
 # =============================================================================
 # CODE ALONG 1: SOCIAL MEDIA ENGAGEMENT
 # =============================================================================
@@ -10,6 +15,23 @@ Python Functions - Unit 3 Lesson 1 Starter Code
 # Parameters: likes, shares, comments
 # Return: total engagement (sum of all three)
 
+def calculate_engagement(likes, shares, comments):
+    """Calculate the total media engagement. 
+    This function takes the number of likes, shares, and comments on a post and return the total engagement count.
+    
+    Args:
+        likes (int): the number of likes
+        shares (int): the number of shares
+        comments (int): the number of comments
+        
+    Returns: 
+        int: the total engagement, calculated as the sum of likes, shares, and comments
+        Example: >>>calculate_engagement(120, 45, 30)
+        195
+    """
+    total = likes + shares + comments
+    return total 
+print(calculate_engagement(500, 50, 200))
 
 # Test it
 # print(calculate_engagement(500, 50, 200))  # Should print: 750
@@ -24,12 +46,13 @@ Python Functions - Unit 3 Lesson 1 Starter Code
 # Return: username with @ prefix
 # Example: format_handle("nasa") returns "@nasa"
 
-
+def format_handle(username):
+    return "@" + username
+print(format_handle("nasa"))
 
 # Test it
 # print(format_handle("nasa"))    # Should print: @nasa
 # print(format_handle("tswift"))  # Should print: @tswift
-
 
 # =============================================================================
 # PRACTICE 2: IS TRENDING
@@ -39,8 +62,11 @@ Python Functions - Unit 3 Lesson 1 Starter Code
 # Parameter: likes (number)
 # Return: True if likes > 1000, else False
 
+def is_trending(likes):
+    return likes > 1000
 
-
+print(is_trending(500))
+print(is_trending(2500))
 # Test it
 # print(is_trending(500))   # Should print: False
 # print(is_trending(2500))  # Should print: True
