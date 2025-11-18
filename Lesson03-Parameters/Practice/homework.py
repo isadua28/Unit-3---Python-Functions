@@ -1,7 +1,7 @@
 # Question 5: Code Tracing 
 """
-18
-15
+18.0
+15.0
 """
 
 # Question 6: Code Writing
@@ -20,6 +20,7 @@ print(make_notification("user", "Welcome", "Check inbox"))
 SELECT name, email FROM users LIMIT 10
 SELECT * FROM logs WHERE "level='error'" LIMIT 5
 """
+
 # Question 8: Code Writing
 
 def log_action(actor, *actions, timestamp=None, **context): 
