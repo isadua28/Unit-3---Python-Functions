@@ -1,46 +1,46 @@
-# # Question 1: User Search with Tricky Trio
-# def search_user_database(query):
-#     count = 0
-#     if not query or " " in query:
-#         return None, "No search query", False
-#     for letter in query:
-#         if not "a" <= letter <= "z":
-#             return False, "Invalid characters", False
-#         count += 1
-#     if query == "john":
-#         return 3, "Found 3 users", True
-#     return 0, "No users found", True
+# Question 1: User Search with Tricky Trio
+def search_user_database(query):
+    count = 0
+    if not query or " " in query:
+        return None, "No search query", False
+    for letter in query:
+        if not "a" <= letter <= "z":
+            return False, "Invalid characters", False
+        count += 1
+    if query == "john":
+        return 3, "Found 3 users", True
+    return 0, "No users found", True
 
 
-# result, message, success = search_user_database("")
-# print(result)
-# print(message)
-# print(success)
+result, message, success = search_user_database("")
+print(result)
+print(message)
+print(success)
 
-# result, message, success = search_user_database("     ")
-# print(result)
-# print(message)
-# print(success)
+result, message, success = search_user_database("     ")
+print(result)
+print(message)
+print(success)
 
-# result, message, success = search_user_database("user123")
-# print(result)
-# print(message)
-# print(success)
+result, message, success = search_user_database("user123")
+print(result)
+print(message)
+print(success)
 
-# result, message, success = search_user_database("user@email")
-# print(result)
-# print(message)
-# print(success)
+result, message, success = search_user_database("user@email")
+print(result)
+print(message)
+print(success)
 
-# result, message, success = search_user_database("admin")
-# print(result)
-# print(message)
-# print(success)
+result, message, success = search_user_database("admin")
+print(result)
+print(message)
+print(success)
 
-# result, message, success = search_user_database("john")
-# print(result)
-# print(message)
-# print(success)
+result, message, success = search_user_database("john")
+print(result)
+print(message)
+print(success)
 
 # Question 2: Book Collection Status
 def analyze_book_pages(integers):
