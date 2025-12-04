@@ -42,9 +42,14 @@ def playlist_stats(*durations):
     # Hint 1: Check if durations is empty FIRST (if not durations:)
     # Hint 2: Use sum() and len() for calculations
     # Hint 3: Return three values separated by commas
-    if not duration: 
+    try: 
+        total_time = sum(durations)
+        song_count = len(durations)
+        average_duration = total_time / song_count
+        return total_time, song_count, average_duration 
+    except ZeroDivisionError: 
         return 0
-    
+        
 
 
 # =============================================================================
